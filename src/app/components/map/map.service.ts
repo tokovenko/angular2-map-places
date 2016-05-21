@@ -16,6 +16,9 @@ export class MapService {
     private markerClickedSource = new Subject<Place>();
     public markerClicked$ = this.markerClickedSource.asObservable();
 
+    private markerMovedSource = new Subject<Place>();
+    public markerMoved$ = this.markerMovedSource.asObservable();
+
     public initMap() {
         GoogleMapsLoader.KEY = this.key;
         GoogleMapsLoader.load(google => {
@@ -95,17 +98,19 @@ export class MapService {
         marker.place = place;
 
         var placeInfo = document.getElementById("place-info");
-        marker.addListener('click', (e) => {
+        marker.addListener('click', e => {
             this.markerClickedSource.next(place);
+        });
+
+        marker.addListener('dragend', e => {
+            place.lat = e.latLng.lat();
+            place.lng = e.latLng.lng();
+            this.markerMovedSource.next(place);
         });
 
         marker.setMap(this.map);
 
         this.markers.push(marker);
-
-        place.placeUpdated$.subscribe(place => {
-            console.log('place updated...');
-        });
     }
 
 
