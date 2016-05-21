@@ -35,17 +35,20 @@ export class Map implements AfterContentInit {
             this.placeService.addNewplace(new Place({
               name: 'place 1',
               lat: 46.623333,
-              lng: 32.604
+              lng: 32.604,
+              types: ['pizzeria', 'coffee shop']
             }));
             this.placeService.addNewplace(new Place({
               name: 'place 2',
               lat: 46.633333,
-              lng: 32.61
+              lng: 32.61,
+              types: ['fast food']
             }));
             this.placeService.addNewplace(new Place({
               name: 'place 3',
               lat: 46.633333,
-              lng: 32.59
+              lng: 32.59,
+              types: ['pizzeria']
             }));
         }, 2000);
 
