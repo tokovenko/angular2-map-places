@@ -1,4 +1,4 @@
-.submitted .ng-valid[required] {
+.submitted .ng-valid {
   background: #DFF0DF;
 }
 .submitted .ng-invalid {

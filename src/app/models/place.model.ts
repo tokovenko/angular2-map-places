@@ -4,7 +4,7 @@ export class Place {
     public name:string = '';
     public description:string = '';
     public rating:string = '';
-    public types:string = '';
+    public types: string[] ;
     public address:string = '';
     public phone:string = '';
     public lat:string = '';
@@ -17,7 +17,7 @@ export class Place {
         this.name = place.name || '';
         this.description = place.description || '';
         this.rating = place.rating || '';
-        this.types = place.types || '';
+        this.types = place.types || [];
         this.address = place.address || '';
         this.phone = place.phone || '';
         this.lat = place.lat || 46.633333;
