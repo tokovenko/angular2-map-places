@@ -1,0 +1,49 @@
+#place-info content {
+    width: 600px;
+    margin-left: -300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 100px;
+    background: white;
+    /* border-radius: 4px; */
+    box-shadow: 0 0 5px #000;
+}
+#place-info:before {
+    position: fixed;
+    background: black;
+    opacity: 0.2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+}
+
+#place-info {
+}
+#place-edit-info .form-wrapper {
+    width: 420px;
+}
+.place-info {}
+    .place-info h1 {
+        font-size: 25px;
+        color: #2294A9;
+    }
+    .place-info .description {
+        margin-bottom: 15px;
+    }
+    .place-info ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+        .place-info ul li {
+            padding-left: 18px;
+            border-left: 3px solid #E2DEDE;
+            margin-bottom: 5px;
+        }
+            .place-info ul li span {
+                font-weight: bold;
+            }

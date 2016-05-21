@@ -1,0 +1,22 @@
+
+blockquote.twitter-tweet {
+        display: none;
+    }
+
+
+
+
+
+.close-block {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: black;
+    padding: 5px 6px 2px 7px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+.close-block:hover {
+    opacity: 0.7;
+}

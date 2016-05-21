@@ -1,0 +1,9 @@
+#nav {
+    padding: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    /* border-radius: 4px; */
+    background: white;
+    box-shadow: 0 0 5px #000;
+}

@@ -1,0 +1,33 @@
+<div id="place-info" *ngIf="place">
+    <content>
+
+        <div class="pull-right">
+            <button
+                type="button"
+                class="btn btn-default btn-sm"
+                 *ngIf="!editable"
+                (click)="onEnableEditableMode()">
+                <span class="glyphicon glyphicon-pencil"></span> Edit
+            </button>
+             <button
+                type="button"
+                class="btn btn-default btn-danger btn-sm"
+                (click)="removePlace(place)">
+                <span class="glyphicon glyphicon glyphicon-trash"></span> Remove
+            </button>
+        </div>
+
+        <edit-place-info
+            [place]="place"
+            (canceled)="onDisableEditableMode()"
+            (updated)="onUpdatedPlace($event)"
+            *ngIf="editable"></edit-place-info>
+
+        <view-place-info [place]="place" *ngIf="!editable"></view-place-info>
+
+        <div class="close-block" (click)="onClosePlaceInfo()">
+            <span class="glyphicon glyphicon-remove"></span>
+        </div>
+
+    </content>
+</div>

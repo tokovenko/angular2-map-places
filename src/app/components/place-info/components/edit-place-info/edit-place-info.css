@@ -1,0 +1,12 @@
+.submitted .ng-valid[required] {
+  background: #DFF0DF;
+}
+.submitted .ng-invalid {
+  background: #F0DFDF;
+}
+
+.submitted .form-group>.error-msg {
+    color: #C37676;
+    font-size: 12px;
+    margin: 4px 0 0 0;
+}
