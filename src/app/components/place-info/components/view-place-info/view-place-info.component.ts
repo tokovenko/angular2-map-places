@@ -12,9 +12,13 @@ import { Place} from './../../../../models/place.model';
 
 export class ViewPlaceInfo implements AfterContentInit {
     @Input()
-    place: Place;
+    public place: Place;
 
-    ngAfterContentInit() {
+    public ngAfterContentInit() {
         this.place.addView();
+    }
+
+    public toogleLike() {
+        this.place.toggleLike();
     }
 }

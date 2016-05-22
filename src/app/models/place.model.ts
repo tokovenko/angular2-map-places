@@ -10,6 +10,7 @@ export class Place {
     public lat:string = '';
     public lng:string = '';
     public views:number;
+    public liked:boolean;
 
     public placeUpdatedSource = new Subject<Place>();
     public placeUpdated$ = this.placeUpdatedSource.asObservable();
@@ -24,9 +25,14 @@ export class Place {
         this.lat = place.lat || 46.633333;
         this.lng = place.lng || 32.6;
         this.views = place.views || 0;
+        this.liked = place.liked || false;
     }
 
     public addView() {
         this.views++;
+    }
+
+    public toggleLike() {
+        this.liked = !this.liked;
     }
 }

@@ -28,5 +28,21 @@
             <i class="glyphicon glyphicon-eye-open"></i>
             {{place.views}}
         </span>
+        <div style="display: inline-block; padding-left: 10px;">
+            <button
+                *ngIf="place.liked"
+                type="button"
+                class="btn btn-default btn-danger btn-small"
+                (click)="toogleLike()">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Remove like
+            </button>
+            <button
+                *ngIf="!place.liked"
+                type="button"
+                class="btn btn-default btn-success btn-sm"
+                (click)="toogleLike()">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Add like
+            </button>
+        </div>
     </div>
 </div>

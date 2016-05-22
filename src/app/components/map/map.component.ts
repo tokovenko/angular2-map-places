@@ -36,7 +36,9 @@ export class Map implements AfterContentInit {
               name: 'place 1',
               lat: 46.623333,
               lng: 32.604,
-              types: ['pizzeria', 'coffee shop']
+              types: ['pizzeria', 'coffee shop'],
+              liked: true,
+              views: 11
             }));
             this.placeService.addNewplace(new Place({
               name: 'place 2',
