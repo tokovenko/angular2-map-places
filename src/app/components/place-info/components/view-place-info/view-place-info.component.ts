@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, AfterContentInit} from '@angular/core';
 
 import { Place} from './../../../../models/place.model';
 
@@ -10,7 +10,11 @@ import { Place} from './../../../../models/place.model';
     template: require('./view-place-info.html')
 })
 
-export class ViewPlaceInfo {
+export class ViewPlaceInfo implements AfterContentInit {
     @Input()
     place: Place;
+
+    ngAfterContentInit() {
+        this.place.addView();
+    }
 }
