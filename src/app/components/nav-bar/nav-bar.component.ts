@@ -15,6 +15,8 @@ export class NavBar {
     @Output()
     public openSearch: EventEmitter<any> = new EventEmitter();
 
+    public currentTab: string = 'places';
+
     constructor(
       public placeService: PlaceService) {
     }
@@ -28,5 +30,9 @@ export class NavBar {
 
     public onOpenSearch() {
         this.openSearch.next({});
+    }
+
+    public setCurrentTab(tab) {
+        this.currentTab = tab;
     }
 }

@@ -1,5 +1,5 @@
 <div id="nav">
-    <div class="btn-group">
+    <div class="btn-group pull-right">
         <button
             id="add-marker"
             type="button"
@@ -15,4 +15,22 @@
             <span class="glyphicon glyphicon-search"></span>
         </button>
     </div>
+    <div class="tabs-wrapper">
+      <ul class="nav nav-tabs" role="tablist">
+        <li [class.active]="currentTab=='places'">
+            <a (click)="setCurrentTab('places')">New Places</a>
+        </li>
+        <li [class.active]="currentTab=='comments'">
+            <a (click)="setCurrentTab('comments')">Comments</a>
+        </li>
+        <li [class.active]="currentTab=='likes'">
+            <a (click)="setCurrentTab('likes')">Likes</a>
+        </li>
+      </ul>
+        <div class="tab-content">
+            <div class="tab-pane" [class.active]="currentTab=='places'">New Places</div>
+            <div class="tab-pane" [class.active]="currentTab=='comments'">Comments</div>
+            <div class="tab-pane" [class.active]="currentTab=='likes'">Likes</div>
+        </div>
+      </div>
 </div>

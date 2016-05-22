@@ -33,7 +33,7 @@ import { MapService } from './components/map/map.service';
 export class App implements AfterContentInit {
     public loading = false;
     public name = 'Map App';
-    public isSearchOpen = true;
+    public isSearchOpen = false;
     public place: Place;
 
     constructor(

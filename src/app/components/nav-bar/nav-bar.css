@@ -7,3 +7,12 @@
     background: white;
     box-shadow: 0 0 5px #000;
 }
+
+.tabs-wrapper {
+    width: 500px;
+}
+    .tabs-wrapper .nav-tabs>li>a {
+        font-size: 13px;
+        color: #000;
+        cursor: pointer;
+    }
