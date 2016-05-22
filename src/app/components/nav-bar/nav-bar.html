@@ -28,9 +28,102 @@
         </li>
       </ul>
         <div class="tab-content">
-            <div class="tab-pane" [class.active]="currentTab=='places'">New Places</div>
-            <div class="tab-pane" [class.active]="currentTab=='comments'">Comments</div>
-            <div class="tab-pane" [class.active]="currentTab=='likes'">Likes</div>
+            <div class="tab-pane" [class.active]="currentTab=='places'">
+                <last-places>
+                    <ul class="last-places">
+                        <li>
+                            <div class="place">
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                                <div class="description">Some description</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="place">
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                                <div class="description">Some description</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="place">
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                                <div class="description">Some description</div>
+                            </div>
+                        </li>
+                    </ul>
+                </last-places>
+            </div>
+            <div class="tab-pane" [class.active]="currentTab=='comments'">
+                <last-comments>
+                    <ul class="last-places">
+                        <li>
+                            <div class="place">
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                                <div class="description">
+                                    <i class="glyphicon glyphicon-comment"></i>
+                                    Some description
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="place">
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                                <div class="description">
+                                    <i class="glyphicon glyphicon-comment"></i>
+                                    Some description
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="place">
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                                <div class="description">
+                                    <i class="glyphicon glyphicon-comment"></i>
+                                    Some description
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </last-comments>
+            </div>
+            <div class="tab-pane" [class.active]="currentTab=='likes'">
+                <last-likes>
+                    <ul class="last-places">
+                        <li>
+                            <div class="place">
+                                <div class="like">
+                                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                                </div>
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="place">
+                                <div class="like">
+                                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                                </div>
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="place">
+                                <div class="like">
+                                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                                </div>
+                                <div class="title">Some title</div>
+                                <div class="date">20.07.15</div>
+                            </div>
+                        </li>
+                    </ul>
+                </last-likes>
+            </div>
         </div>
       </div>
 </div>

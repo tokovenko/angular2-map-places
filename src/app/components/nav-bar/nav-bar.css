@@ -11,8 +11,51 @@
 .tabs-wrapper {
     width: 500px;
 }
+.tabs-wrapper .tab-content {
+    margin-top: 20px;
+}
     .tabs-wrapper .nav-tabs>li>a {
         font-size: 13px;
         color: #000;
         cursor: pointer;
     }
+
+.last-places {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    .last-places .place {
+        padding: 5px 5px;
+        border-bottom: 1px solid #ECECEC;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .last-places .place:hover {
+        background: #F3F3F3;
+    }
+        .last-places .like {
+            width: 30px;
+            float: left;
+            text-align: center;
+            padding-top: 6px;
+            margin-right: 5px;
+        }
+            .last-places .like i {
+                font-size: 20px;
+            }
+        .last-places .place .title {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .last-places .place .date {
+            font-size: 11px;
+            color: #A5A5A5;
+        }
+        .last-places .place .description {
+        }
+            .last-places .place .description i{
+                position: relative;
+                top: 2px;
+                color: #D8D8D8;
+            }
