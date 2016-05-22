@@ -17,8 +17,7 @@ export class SearchResultsItem {
     constructor(private placeService: PlaceService) {
     }
 
-    public onViewPlace(place: any) {
-        console.log('onViewPlace: ', place)
+    public onViewPlace(place: Place) {
         this.placeService.placeViewedSource.next(place);
     }
 }
