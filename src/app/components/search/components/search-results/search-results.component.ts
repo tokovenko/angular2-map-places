@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {SearchResultsItem} from './search-results-item';
+import {PlaceService} from './../../../../services/place.service';
+import {Place} from './../../../../models/place.model';
 
 @Component({
     selector: 'search-results',
@@ -11,4 +13,6 @@ import {SearchResultsItem} from './search-results-item';
 })
 
 export class SearchResults {
+    @Input()
+    public places: Place[];
 }

@@ -16,6 +16,9 @@ export class PlaceService {
     public placeUpdatedSource = new Subject<Place>();
     public placeUpdated$ = this.placeUpdatedSource.asObservable();
 
+    public placeViewedSource = new Subject<Place>();
+    public placeViewed$ = this.placeViewedSource.asObservable();
+
     public addNewplace(place: Place) {
         this.places.push(place);
         this.placeAddedSource.next(place);
@@ -27,5 +30,9 @@ export class PlaceService {
             this.places.splice(index, 1);
         }
         this.placeRemovedSource.next(place);
+    }
+
+    public getPlaces() {
+        return this.places;
     }
 }

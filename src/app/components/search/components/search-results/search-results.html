@@ -1,5 +1,7 @@
 <div class="results">
     <ul>
-        <search-results-item></search-results-item>
+        <li *ngFor="let place of places">
+            <search-results-item [item]="place"></search-results-item>
+        </li>
     </ul>
 </div>

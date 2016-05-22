@@ -10,6 +10,8 @@ import {PlaceInfo} from './components/place-info';
 import {Map} from './components/map';
 import {AppState} from './app.service';
 
+import { Place } from './models/place.model';
+
 import { PlaceService } from './services/place.service';
 import { MapService } from './components/map/map.service';
 /*
@@ -29,29 +31,35 @@ import { MapService } from './components/map/map.service';
 })
 
 export class App implements AfterContentInit {
-  public loading = false;
-  public name = 'Map App';
+    public loading = false;
+    public name = 'Map App';
+    public isSearchOpen = true;
+    public place: Place;
 
-  constructor(
-    public appState: AppState) {
-  }
+    constructor(
+        public appState: AppState,
+        private placeService: PlaceService,
+        private mapService: MapService) {
+            placeService.placeViewed$.subscribe(place => {
+                this.isSearchOpen = false;
+                this.place = place;
+            });
+            mapService.markerClicked$.subscribe(place => {
+                this.place = place;
+            });
+    }
 
-  ngOnInit() {
-    console.log('Initial App State', this.appState.state);
-  }
+    ngOnInit() {
+        console.log('Initial App State', this.appState.state);
+    }
 
-  ngAfterContentInit() {
-      var closeSearchBtn = document.getElementById("close-search");
-      var showSearchBtn = document.getElementById("show-search");
-      var searchBlock = document.getElementById("search");
-      closeSearchBtn.addEventListener('click', function() {
-          searchBlock.style.display = 'none';
-      });
-      showSearchBtn.addEventListener('click', function() {
-          searchBlock.style.display = 'block';
-      });
+    openSearch() {
+        this.isSearchOpen = true;
+    }
+    closeSearch() {
+        this.isSearchOpen = false;
+    }
+    ngAfterContentInit() {
+    }
 
-
-
-  }
 }

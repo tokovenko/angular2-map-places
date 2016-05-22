@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Output, EventEmitter} from '@angular/core';
 import {PlaceService} from './../../services/place.service';
 import {Place} from './../../models/place.model';
 
@@ -11,6 +11,10 @@ import {Place} from './../../models/place.model';
 })
 
 export class NavBar {
+
+    @Output()
+    public openSearch: EventEmitter<any> = new EventEmitter();
+
     constructor(
       public placeService: PlaceService) {
     }
@@ -20,5 +24,9 @@ export class NavBar {
             name: 'test place'
         });
         this.placeService.addNewplace(place);
+    }
+
+    public onOpenSearch() {
+        this.openSearch.next({});
     }
 }

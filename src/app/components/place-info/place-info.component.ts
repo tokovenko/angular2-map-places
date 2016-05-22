@@ -18,16 +18,13 @@ import {EditPlaceInfo} from './components/edit-place-info';
 
 export class PlaceInfo {
 
+    @Input()
     public place: Place;
 
     public editable:boolean = false;
 
     constructor(
-        private placeService: PlaceService,
-        private mapService: MapService) {
-            mapService.markerClicked$.subscribe(place => {
-                this.place = place;
-            });
+        private placeService: PlaceService) {
             placeService.placeRemoved$.subscribe(place => {
                 this.onClosePlaceInfo();
             });

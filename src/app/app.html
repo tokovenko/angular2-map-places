@@ -1,6 +1,6 @@
 <div id="page">
     <map></map>
-    <nav-bar></nav-bar>
-    <place-info></place-info>
-    <search></search>
+    <nav-bar (openSearch)="openSearch()"></nav-bar>
+    <place-info [place]="place"></place-info>
+    <search *ngIf="isSearchOpen" (closed)="closeSearch()"></search>
 </div>
